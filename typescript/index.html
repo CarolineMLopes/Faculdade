@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Meu portifólio interativo</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    header, section, footer {
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .escondido1 {
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="nome">Meu nome</h1>
+        <p>Desenvolvedor Web em Formação</p>
+    </header>
+
+    <section>
+        <h2>Sobre Mim</h2>
+        <p>Olá! Sou um entusiasta da tecnologia começando minha jornada no 
+            desenvolvimento web.</p>
+        <button id="mudarNome">Mudar Nome</button>
+    </section>
+
+    <section>
+        <h2>Minhas Habilidades</h2>
+        <ul id="listaHabilidades">
+            <li>HTML</li>
+            <li>JavaScript (aprendendo)</li>
+            <li>Resolução de problemas</li>
+        </ul>
+        <div>
+            <input type="text" id="novaHabilidade" placeholder="Nova habilidade">
+            <button id="adicionarHabilidade">Adicionar</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projetos</h2>
+        <button id="mostrarProjetos">Mostrar Projetos</button>
+        <div id="projetosContainer" class="escondido">
+            <p>Aqui estão alguns projetos em que trabalhei</p>
+            <ul>
+                <li>Portifólio pessoal</li>
+                <li>Calculadora simples</li>
+                <li>Lista de tarefas</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Contato</h2>
+        <p>Email <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy ; <span id="anoAtual"></span> Meu portifólio. 
+            Todos os direitos reservados.</p>
+    </footer>
+
+    <!--Javascript-->
+
+<script>
+    document.getElementById("anoAtual").textContent = new Date().getFullYear();
+
+    document.getElementById("mudarNome").addEventListener("click", function(){
+        const novoNome = prompt("Digite seu nome:");
+        if(novoNome){
+            document.getElementById("nome").textContent = novoNome;
+        }
+    });
+
+    document.getElementById("adicionarHabilidade").addEventListener("click", function(){
+        const novaHabilidade = document.getElementById("novaHabilidade").value;
+        if (novaHabilidade.trim() != ""){
+            const novoItem = document.createElement("li");
+            novoItem.textContent = novaHabilidade;
+            
+            document.getElementById("listaHabilidades").appendChild(novoItem);
+
+            document.getElementById("novaHabilidade").value = "";
+        }
+    });
+
+    document.getElementById("mostrarProjetos").addEventListener("click", function(){
+        const projetosContainer = document.getElementById("projetosContainer");
+        const botao = document.getElementById("mostrarProjetos");
+        if(projetosContainer.classList.contains("escondido")){
+            projetosContainer.classList.remove("escondido");
+            botao.textContent = "Esconder Projetos";
+        } else {
+            projetosContainer.classList.add("escondido");
+            botao.textContent = "Mostrar Projetos";
+        }
+    });
+</script>
+</body>
+</html>
