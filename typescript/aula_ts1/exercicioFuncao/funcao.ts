@@ -7,7 +7,7 @@ function saudacao(nome: string, titulo?: string): string{
         return `Olá, ${titulo} ${nome}!`;
     }
 
-    return `Olá, $(nome)`;
+    return `Olá, ${nome}`;
 }
 
 console.log(saudacao("Maria"));
