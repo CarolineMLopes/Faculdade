@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS vs TS</title>
+</head>
+<style>
+    .js{
+        background-color: #fffbeb;
+        padding: 10px;
+    }
+    .ts{
+        background-color: #e6f7ff;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .error{
+        color: red;
+    }
+</style>
+<body>
+    <h1>JavaScript vs TypeScript</h1>
+    <div class="js">
+        <h2>JavaScript</h2>
+        <p>Função sem tipagem - aceita qualquer tipo de entrada</p>
+
+        <input id="jsPreco" value="29.99" placeholder="Preço">
+        <input id="jsQtd" value="2" placeholder="Quantidade">
+        <button id="jsBtn">Calcular</button>
+        <div id="jsResultado"></div>
+    </div>
+
+    <div class="ts">
+        <h2>TypeScript</h2>
+        <p>Função com tipagem - verifica se os valores são números</p>
+
+        <input id="tsPreco" value="29.99" placeholder="Preço">
+        <input id="tsQtd" value="2" placeholder="Quantidade">
+        <button id="tsBtn">Calcular</button>
+        <div id="tsResultado"></div>
+        <div id="tsErro" class="error"></div>
+    </div>
+
+    <script src="calculoJS.js"></script>
+    <script src="calculoTs.js"></script>
+</body>
+</html>
