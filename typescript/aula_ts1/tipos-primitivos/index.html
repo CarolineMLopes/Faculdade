@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exebição de Variáveis TypeScript</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        .variavel{
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Valores das Variáveis</h1>
+    <div class="variavel" id="nome"></div>
+    <div class="variavel" id="idade"></div>
+    <div class="variavel" id="ativo"></div>
+    <div class="variavel" id="indefinido"></div>
+    <div class="variavel" id="nulo"></div>
+    <div class="variavel" id="simbolo"></div>
+    <div class="variavel" id="bigInt"></div>
+    <div class="variavel" id="numeros"></div>
+    <div class="variavel" id="nomes"></div>
+    <div class="variavel" id="pessoa"></div>
+    <script src=""></script>
+    <script>
+        document.getElementById('nome').innerText = 'Nome: ' + nome;
+        document.getElementById('idade').innerText = 'Idade: ' + idade;
+        document.getElementById('ativo').innerText = 'Ativo: ' + ativo;
+        document.getElementById('indefinido').innerText = 'Indefinido: ' + (indefinido === undefined ? 'undefined': indefinido);
+        document.getElementById('nulo').innerText = 'Nulo: ' + (nulo === null ? 'null':null);
+        document.getElementById('simbolo').innerText = 'Símbolo: ' + simbolo.toString();
+        document.getElementById('bigInt').innerText = 'BigInt: ' + bigInt.toString();
+        document.getElementById('numeros').innerText = 'Numeros: ' + numeros.join(',');
+        document.getElementById('nomes').innerText = 'Nomes: ' + nomes.join(',');
+        document.getElementById('pessoa').innerText = 'Pessoa: ' + pessoa[0] + ',' + pessoa[1];
+    </script>
+</body>
+</html>
