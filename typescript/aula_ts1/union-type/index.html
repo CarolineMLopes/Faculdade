@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição de Union Types e Type Aliases</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        .variavel {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Valores das Variáveis de Union Types e Type Aliases</h1>
+    <div class="variavel" id="codigo"></div>
+    <div class="variavel" id="id"></div>
+    <div class="variavel" id="posicao"></div>
+    <div class="variavel" id="resposta"></div>
+    <script src="union.js"></script>
+    <script>
+        //Exibindo os valores das variáveis na página
+        document.getElementById('codigo').innerText = 'Código: ' + codigo;
+        document.getElementById('id').innerText = 'Identificador: ' + id;
+        document.getElementById('posicao').innerText = 'Posição:(x:' + posicao.x + ',y:' + posicao.y + ')';
+        document.getElementById('resposta').innerText = 'Resposta HTTP: ' + resposta;
+    </script>
+</body>
+</html>
