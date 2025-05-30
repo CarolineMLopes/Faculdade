@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição de Funções TypeScript</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        .resultado{
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultados das Funções</h1>
+    <div class="resultado">resultadoSoma</div>
+    <div class="resultado">resultadoSaudacao</div>
+    <div class="resultado">resultadoCriarElemento</div>
+    <div class="resultado">resultadoSomarTodos</div>
+    <div class="resultado">resultadoAdicao</div>
+    <div class="resultado">resultadoSubtracao</div>
+    <script src="funcao.js"></script>
+    <script>
+        const resultadoSoma = soma(5,10);
+        document.getElementById('resultadoSoma').innerText = 'Soma: ' + resultadoSoma;
+            const resultadoSaudacaoMaria = saudacao("Maria");
+            const resultadoSaudacaoSilva = saudacao("Silva", "Dr.");
+            document.getElementById('resultadoSaudacao').innerText = `Saudação: ${resultadoSaudacaoMaria} | ${resultadoSaudacaoSilva}`;
+            const resultadoCriarElementoDiv = criarElemento("div", "Conteúdo");
+            const resultadoCriarElementoButton = criarElemento("button","Clique","btn");
+            document.getElementById('resultadoCriarElemento').innerHTML = `Elemento: ${resultadoCriarElementoDiv} | ${resultadoCriarElementoButton}`;
+            const resultadoSomarTodos = somarTodos(1,2,3,4,5);
+            document.getElementById('resultadoSomarTodos').innerText = 'Somar de Todos: ' + resultadoSomarTodos;
+            const resultadoAdicao = adicao(10,5);
+            const resultadoSubtracao = subtracao(10,5);
+            document.getElementById('resultadoAdicao').innerText = 'Adição: ' + resultadoAdicao;
+            document.getElementById('resultadoSubtração').innerText = 'Subtração: ' + resultadoSubtracao;
+    </script>
+</body>
+</html>
