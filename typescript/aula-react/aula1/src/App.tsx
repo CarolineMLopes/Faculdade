@@ -1,24 +1,75 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Exemplo de uso BotaoSimples.tsx
+/* import React from 'react';
+import BotaoSimples from './BotaoSimples';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Exemplo sem Props</h1>
+      <BotaoSimples/>
+      <BotaoSimples/>
+      <BotaoSimples/>
+    </div>
+    
+  );
+};
+
+export default App; */
+
+// Exemplo de us Botao.tsx
+/* import React from "react";
+import Botao from "./Botao";
+
+const App: React.FC = () => {
+  const handleClick = () => {
+    console.log('Botão foi clicado!');
+  };
+
+  return(
+    <div>
+      <h1>Exemplo de Props</h1>
+      <Botao
+      texto="Clique Aqui"
+      cor="blue"
+      onClick={handleClick}
+      />
+    </div>
+  );
+};
+
+export default App; */
+
+// Exemplo com us do Botao.tsx modificado
+import React from "react";
+import Botao from "./Botao";
+
+const App: React.FC = () => {
+  const handleClick = () => {
+    console.log('Botão foi clicado!');
+  };
+  
+  const footClick = () => {
+    console.log('Botão verde');
+    let n1 = 5;
+    let n2 = 7;
+    let media = (n1+n2)/2;
+    console.log('media', media);
+  };
+
+  return (
+    <div>
+      <h1>Exemplo de Props</h1>
+      <Botao 
+      texto="Clique aqui"
+      cor="blue"
+      onClick={handleClick}
+      />
+      <br/><br/>
+      <Botao
+      texto="ok"
+      cor="green"
+      onClick={handleClick}
+      />
     </div>
   );
 }
