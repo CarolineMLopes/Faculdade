@@ -25,7 +25,7 @@ const ViagemCalculator: React.FC = () => {
     return (
         <div>
             <h2>Calculadora de Gastos de Viagem</h2>
-            <p>Distancia</p>
+            <p>Distância:</p>
             <input type="number" placeholder="Distância (Km)" 
             onChange={(e) =>
                 setViagemData({...ViagemData, distancia: parseFloat(e.target.value)})
@@ -35,7 +35,7 @@ const ViagemCalculator: React.FC = () => {
             onChange={(e) =>
                 setViagemData({...ViagemData, precoLitro: parseFloat(e.target.value)})
             }/>
-            <p>Consumo</p>
+            <p>Consumo:</p>
             <input type="number" placeholder="Consumo (Km/l)" 
             onChange={(e) =>
                 setViagemData({...ViagemData, consumoKm: parseFloat(e.target.value)})
