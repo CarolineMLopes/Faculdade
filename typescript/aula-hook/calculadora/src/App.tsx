@@ -1,34 +1,26 @@
 import React from 'react';
-import CalculadoraInterativa from './CalculadoraInterativa';
+import logo from './logo.svg';
+import './App.css';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div style={{
-      maxWidth: '800px',
-      margin: '0 auto',
-      padding: '20px',
-      fontFamily: 'Arial, sans-serif'
-    }}>
-      <h1>Calculadora de Média - Versão Interativa</h1>
-      
-      <p>
-        Preencha o formulário abaixo com o nome do aluno e suas notas para calcular a média
-        e verificar sua situação.
-      </p>
-      
-      <CalculadoraInterativa />
-      
-      <div style={{
-        marginTop: '30px',
-        padding: '15px',
-        backgroundColor: '#f0f0f0',
-        borderRadius: '8px',
-        fontSize: '14px'
-      }}>
-      
-      </div>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-};
+}
 
 export default App;
